@@ -5,7 +5,7 @@ class tree{
             restitution :0,
             friction :1,
             }
-            this.body=Bodies.rectangle(this.image,x,y,width,height,options)
+            this.body=Bodies.rectangle(x,y,width,height,options)
             this.width = width
             this.height = height
             this.image = loadImage("Sprites/tree.png")
@@ -18,8 +18,8 @@ class tree{
         push()
         translate(pos.x,pos.y)
         rotate(angle)
-        rectMode(RADIUS)
-        rect(0,0,this.radius,this.radius)
+        imageMode(RADIUS)
+        image(this.image,0,0,this.radius,this.radius)
         pop()
     }
 }

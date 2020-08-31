@@ -6,7 +6,7 @@ class stone{
             friction:1,
             density:1.2
             }
-            this.body=Bodies.circle(this.image,x,y,15,options)
+            this.body=Bodies.circle(x,y,15,options)
             this.radius = 15;
             this.image = loadImage("Sprites/stone.png")
     
@@ -18,8 +18,8 @@ class stone{
         push()
         translate(pos.x,pos.y)
         rotate(angle)
-        ellipseMode(RADIUS)
-        ellipse(0,0,this.radius,this.radius)
+        imageMode(RADIUS)
+        image(this.image0,0,this.radius,this.radius)
         pop()
      }
 }

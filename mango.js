@@ -3,9 +3,9 @@ class mango{
         var options = {
             isStatic:true,
             restitution :0,
-            friction :1,
+            friction :1
             }
-            this.body=Bodies.circle(this.image,x,y,15,options)
+            this.body=Bodies.circle(x,y,15,options)
             this.radius = 15;
             this.image = loadImage("Sprites/mango.png")
     
@@ -17,8 +17,8 @@ class mango{
         push()
         translate(pos.x,pos.y)
         rotate(angle)
-        ellipseMode(RADIUS)
-        ellipse(0,0,this.radius,this.radius)
+        imageMode(RADIUS)
+        image(this.image,0,0,this.radius,this.radius)
         pop()
     }
 }    

@@ -11,7 +11,6 @@ constructor(x,y,width,height){
     display(){
         var pos = this.body.position
             rectMode(CENTER)
-            fill("green")
             rect(pos.x,pos.y,this.width,this.height)
             }
 }
