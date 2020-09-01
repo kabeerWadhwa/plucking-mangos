@@ -6,8 +6,8 @@ class stone{
             friction:1,
             density:1.2
             }
-            this.body=Bodies.circle(x,y,15,options)
-            this.radius = 15;
+            this.body=Bodies.circle(x,y,40,options)
+            this.radius = 40;
             this.image = loadImage("Sprites/stone.png")
     
             World.add(world,this.body)
@@ -19,7 +19,7 @@ class stone{
         translate(pos.x,pos.y)
         rotate(angle)
         imageMode(RADIUS)
-        image(this.image0,0,this.radius,this.radius)
+        image(this.image,0,0,this.radius,this.radius)
         pop()
      }
 }

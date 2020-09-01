@@ -5,8 +5,8 @@ class mango{
             restitution :0,
             friction :1
             }
-            this.body=Bodies.circle(x,y,15,options)
-            this.radius = 15;
+            this.body=Bodies.circle(x,y,30,options)
+            this.radius = 30;
             this.image = loadImage("Sprites/mango.png")
     
             World.add(world,this.body)

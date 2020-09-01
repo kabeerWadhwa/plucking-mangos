@@ -4,12 +4,10 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Constraint = Matter.Constraint;
-var boyIMG,boy;
 var ground1,mango1,mango2,mango3,stone1,tree1;
 
 
 function preload(){
- boyIMG = loadImage("Sprites/boy.png")
 }
 
 function setup() {
@@ -20,14 +18,14 @@ function setup() {
 	world = engine.world;
 
 	//Create the Bodies Here.
-	ground1 = new ground(400,680,800,20);
-	boy = createSprite(100,650,20,20);
+  ground1 = new ground(400,680,800,20);
+  boy1 = new boy(200,650,30,30);
 	stone1  = new stone(80,650);
-	tree1 = new tree(650,640,20,20);
-	mango1 = new mango(100,100)
-	mango2 = new mango(100,200);
-	mango3 = new mango(100,300);
-	chain1 = new slingshot(tree1.body,stone1.body)
+	tree1 = new tree(600,500,400,400);
+	mango1 = new mango(650,450)
+	mango2 = new mango(600,420);
+	mango3 = new mango(500,360);
+	chain1 = new slingshot(boy1.body,stone1.body)
   
 }
 
@@ -46,6 +44,7 @@ function draw() {
   mango2.display();
   mango3.display();
   chain1.display();
+  boy1.display();
 
   drawSprites();
  
