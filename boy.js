@@ -3,7 +3,7 @@ class boy{
         var Options = {
             isStatic:true
                 }
-        this.body=Bodies.rectangle(x,y,height,width,Options)
+        this.body=Bodies.rectangle(x,y,width,height,Options)
         this.width = width
         this.height = height
         this.image = loadImage("Sprites/boy.png")
